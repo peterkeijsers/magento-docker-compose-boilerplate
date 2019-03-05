@@ -1,0 +1,7 @@
+FROM php:7.3-fpm
+
+RUN apt-get update
+
+RUN docker-php-ext-install simplexml dom bcmath libxml2
+
+RUN docker-php-ext-enable simplexml dom bcmath
